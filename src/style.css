@@ -1,87 +1,95 @@
-
-body{
-    margin:0;
-    justify-content: center;
-    background-color: green;
-    height: 100vh;
+body {
+  margin: 0;
+  justify-content: center;
+  background-color: green;
+  height: 100vh;
 }
 
-
-body,.header,.body,.footer,.card-figure,.card-number,.heart-card,.other-cards,.btn-board,.container-card,.inputBoard{
-    display: flex;
-    align-items: center;
+body,
+.header,
+.body,
+.footer,
+.card-figure,
+.card-number,
+.heart-card,
+.other-cards,
+.btn-board,
+.container-card,
+.inputBoard {
+  display: flex;
+  align-items: center;
 }
-.container-card{
-    flex-direction: column;
+.container-card {
+  flex-direction: column;
 }
-.card{
-    height: 600px;
-    width: 400px;
-    background-color: white;
-    border-radius: 4%;
+.card {
+  height: 600px;
+  width: 400px;
+  background-color: white;
+  border-radius: 4%;
 }
-.header{
-    height: 25%;
-    justify-content: left;
+.header {
+  height: 25%;
+  justify-content: left;
 }
-.body{
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.body {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footer{
-    height: 25%;
-    justify-content: right;
+.footer {
+  height: 25%;
+  justify-content: right;
 }
-.card-figure,.heart-card,.other-cards{
-    height: 140px;
-    width: 140px;
+.card-figure,
+.heart-card,
+.other-cards {
+  height: 140px;
+  width: 140px;
 }
-.card-figure{
-    margin-left: 10px;
-    justify-content: center;
+.card-figure {
+  margin-left: 10px;
+  justify-content: center;
 }
-.card-number{
-    height: 170px;
-    width: 170px;
-    justify-content: center;
+.card-number {
+  height: 170px;
+  width: 170px;
+  justify-content: center;
 }
-.number{
-    font-size: 170px;
-}
-
-.heart-card,.other-cards{
-    margin-right: 10px;
-    justify-content: center;
-    font-size: 160px;
-}
-.heart-card{
-    color:red;
-
-}
-.heart-card-inverted,.other-cards-inverted{
-    margin-right: 10px;
-    justify-content: center;
-    transform: rotate(180deg);
-    font-size: 160px;
-    background-color: gray;
-
-}
-.heart-card-inverted{  
-    color:red;
-}
-.btn-board{
-    height: 30px;
-    width: 170px;
-    margin-top: 30px;
-}
-button{
-    font-size: 20px;
-    color: black;
-    border-radius: 7%;
-}
-.inputBoard{
-    margin-top: 30px; 
+.number {
+  font-size: 170px;
 }
 
+.heart-card,
+.other-cards {
+  margin-right: 10px;
+  justify-content: center;
+  font-size: 160px;
+}
+.heart-card {
+  color: red;
+}
+.heart-card-inverted,
+.other-cards-inverted {
+  margin-right: 10px;
+  justify-content: center;
+  transform: rotate(180deg);
+  font-size: 160px;
+}
+.heart-card-inverted {
+  color: red;
+}
+.btn-board {
+  height: 30px;
+  width: 170px;
+  margin-top: 30px;
+}
+button {
+  font-size: 20px;
+  color: black;
+  border-radius: 7%;
+}
+.inputBoard {
+  margin-top: 30px;
+}

@@ -15,19 +15,29 @@ let ramdonCardNumber = arr => {
   let number = document.querySelector(".number");
   number.innerHTML = getRamdonNumber(arr);
 };
+
 //CHNAGE THE CARD CLICKING THE BUTTON AND EVERY 5 SECONDS AUTOMATICALLY UNTIL STOP BUTTON BEEN CLICKED
 let changeWithTime = () => {
   let myDivs = document.getElementsByClassName("card-figure");
   myDivs.innerHTML = ramdonCards2(getRamdonNumber(cards));
   ramdonCardNumber(cardNumbers);
 };
+//
+let timeSet;
+
+function startInterval() {
+  changeWithTime(); // Cambiar inmediatamente al hacer clic en el botón
+  setTimeout(() => {
+    timeSet = setInterval(changeWithTime(), 5000); // Cambiar cada 5 segundos después del retraso inicial
+  }, 1000);
+}
 // CREATE DIVS WITH THE CLASES FOR EACH CARD WITH A BUTTON FUNCTION
 let divs = document.querySelectorAll(".card-figure");
 let myDiv = document.createElement("div");
 let newDiv = document.createElement("div");
 
 let ramdonCards2 = card => {
-  if (card === "♥") {
+  if (card === "♥" || card === "♦") {
     myDiv.classList = "changeSize heart-card ";
     myDiv.innerHTML = card;
     divs[0].appendChild(myDiv);
@@ -36,12 +46,12 @@ let ramdonCards2 = card => {
     myDiv.innerHTML = card;
     divs[0].appendChild(myDiv);
   }
-  if (card === "♥") {
-    newDiv.classList = "changeSize heart-card inverted";
+  if (card === "♥" || card === "♦") {
+    newDiv.classList = "changeSize heart-card-inverted";
     newDiv.innerHTML = card;
     divs[1].appendChild(newDiv);
   } else {
-    newDiv.classList = "changeSize other-cards inverted";
+    newDiv.classList = "changeSize other-cards-inverted";
     newDiv.innerHTML = card;
     divs[1].appendChild(newDiv);
   }
