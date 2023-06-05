@@ -24,13 +24,14 @@ let changeWithTime = () => {
 };
 //
 let timeSet;
-
 function startInterval() {
   changeWithTime(); // Cambiar inmediatamente al hacer clic en el botón
+
   setTimeout(() => {
-    timeSet = setInterval(changeWithTime(), 5000); // Cambiar cada 5 segundos después del retraso inicial
-  }, 1000);
+    timeSet = setInterval(changeWithTime, 3000); // Cambiar automáticamente cada 3 segundos
+  }, 0); // Retraso mínimo para permitir que el cambio inicial ocurra inmediatamente
 }
+
 // CREATE DIVS WITH THE CLASES FOR EACH CARD WITH A BUTTON FUNCTION
 let divs = document.querySelectorAll(".card-figure");
 let myDiv = document.createElement("div");
